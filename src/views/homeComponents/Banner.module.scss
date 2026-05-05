@@ -1,0 +1,205 @@
+@use "../../assets/styles/variables.scss" as v;
+@use "../../assets/styles/mixins.scss" as mixins;
+
+.bannerContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.bgTextParent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    padding: 1rem .75rem;
+    margin-bottom: 4rem;
+    height: calc(85dvh - 86px);
+
+    @include mixins.responsive(mobile) {
+        height: calc(75dvh - 86px);
+        margin-bottom: 1.75rem;
+    }
+
+    @include mixins.responsive(tablet) {
+        margin-bottom: 2.15rem;
+    }
+}
+
+.txtContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.text {
+    display: inline-block;
+    font-size: 16vw;
+    font-weight: 500;
+    line-height: .75;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-family: var(--font-bigRiver);
+}
+
+.cardContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 89;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.cardParent {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardChild {
+    position: relative;
+    width: 275px;
+    height: 400px;
+    perspective: 1000;
+    margin: auto;
+
+    @include mixins.responsive(mobile) {
+        width: 175px;
+        height: 225px;
+    }
+
+    @include mixins.responsive(tablet) {
+        width: 200px;
+        height: 250px;
+    }
+}
+
+.card {
+    border-radius: .5rem;
+    backface-visibility: hidden;
+}
+
+.whiteContainer {
+    background-color: v.$primary-color;
+    color: v.$secondary-color;
+    padding: 0 3rem;
+    border-radius: .5rem;
+
+    @include mixins.responsive(mobile) {
+        padding: 0 1rem;
+    }
+
+}
+
+.aboutParent {
+    padding: 6rem 0;
+
+    @include mixins.responsive(mobile) {
+        padding: 2.5rem 0;
+    }
+
+    @include mixins.responsive(tablet) {
+        padding: 4.5rem 0;
+    }
+
+    @include mixins.responsive(laptop) {
+        padding: 4.5rem 0;
+    }
+}
+
+.aboutChild {
+    width: 100%;
+    max-width: 800px;
+    padding: 2rem 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+
+    p {
+        font-family: var(--font-satoshi);
+        font-size: 3.2rem;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
+    @include mixins.responsive(tablet) {
+        p {
+            font-size: 2.25rem;
+        }
+    }
+
+    @include mixins.responsive(mobile) {
+        p {
+            font-size: 1.875rem;
+        }
+    }
+}
+
+.projectTxtContainer {
+    width: 100%;
+    max-width: 450px;
+    padding: 2rem 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+
+    p {
+        font-family: var(--font-satoshi);
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.45;
+    }
+
+    @include mixins.responsive(mobile) {
+        p {
+            font-size: 1.2rem;
+            line-height: 1.85;
+        }
+    }
+}
+
+.projectParent {
+    // display: flex;
+}
+
+.projectChild {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    align-items: center;
+    padding: 2rem 1rem;
+}
+
+.projectName {
+    color: white;
+
+    h3 {
+        font-family: var(--font-bigRiver);
+        font-size: 3.25rem;
+        letter-spacing: -.09rem;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+}
+
+.projectCategory {
+    color: white;
+
+    p {
+        font-size: .8rem;
+        font-family: var(--font-satoshi);
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 0.05rem;
+    }
+}

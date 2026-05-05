@@ -1,0 +1,170 @@
+@use '../../assets/styles/variables.scss' as v;
+@use '../../assets/styles/mixins.scss' as mixins;
+
+.navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: v.$secondary-color;
+    z-index: 99;
+}
+
+.navContainer {
+    // border: 1px solid v.$primary-color;
+    padding: 1.25rem 2rem;
+    @include mixins.flex-between;
+
+    @include mixins.responsive(mobile) {
+        padding: 1.25rem 1.5rem;
+    }
+}
+
+.navTxt {
+
+    h1 {
+        font-size: 1rem;
+        font-family: var(--font-bigRiver);
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 1.5rem;
+        letter-spacing: 0.005rem;
+    }
+}
+
+.navPopupParent {
+    position: relative;
+    z-index: 1;
+}
+
+// 
+
+.navCtaContainer {
+    @include mixins.flex-row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.navmenuContainer {
+    padding: .95rem .75rem;
+    border-radius: 2rem;
+    border: 1px solid v.$tertiary-color;
+    cursor: pointer;
+}
+
+.menuBtn {
+    @include mixins.flex-col;
+    gap: .25rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menuline {
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    background-color: v.$primary-color;
+    transition: .3s ease-in-out;
+}
+
+.menuActive {
+    .menuline:nth-child(1) {
+        transform: translateY(2px); // move down
+    }
+
+    .menuline:nth-child(2) {
+        transform: translateY(-2px); // move up
+    }
+}
+
+.navMenuLinkPopup {
+    position: absolute;
+    top: 65%;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: 99;
+    overflow: hidden;
+    z-index: 99;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100dvh;
+        background-color: v.$secondary-color;
+        z-index: -1;
+        opacity: .5;
+    }
+}
+
+
+.menuLinkContainer {
+    background-color: v.$primary-color;
+    margin: 2.15rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    border-radius: .5rem;
+
+    @include mixins.responsive(mobile) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include mixins.responsive(tablet) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+.menuLink:nth-child(1) {
+    border-right: 1.5px solid v.$gray-color;
+}
+
+.menuLink:nth-child(2) {
+    border-right: 1.5px solid v.$gray-color;
+}
+
+.menuLink {
+    padding: 12rem .5rem .5rem .5rem;
+    color: v.$secondary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-bigRiver);
+    font-size: 1.35rem;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include mixins.responsive(mobile) {
+        font-size: 1.15rem;
+        padding: 1.5rem .5rem 1.5rem .5rem;
+    }
+
+    @include mixins.responsive(tablet) {
+        padding: 2.5rem .5rem 2.5rem .5rem;
+    }
+}
+
+.menuLinkTxt{
+    position: relative;
+    display: inline-block;
+}
+
+.menuLinkTxt::before{
+    content: '';
+    position: absolute;
+    bottom: -35%;
+    left: 0%;
+    width: 0%;
+    height: 2px;
+    background-color: v.$secondary-color;
+    transition: .3s ease-in-out;
+}
+
+.menuLink:hover .menuLinkTxt::before{
+    width: 100%;
+}

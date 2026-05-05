@@ -1,0 +1,79 @@
+@use "./variables.scss";
+@use "./mixins.scss" as mixins;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: variables.$secondary-color;
+    color: variables.$primary-color;
+}
+
+a {
+    text-decoration: none;
+}
+
+.padding-top {
+    padding-top: 5.5rem;
+}
+
+.padding-lr {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+
+    @include mixins.responsive(mobile) {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    @include mixins.responsive(tablet) {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+.padding-tb{
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+
+    @include mixins.responsive(mobile) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    @include mixins.responsive(tablet) {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    @include mixins.responsive(laptop) {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+}
+
+.CtaBtn-black-txt{
+    color: variables.$secondary-color;
+    font-weight: 600;
+}
+
+.CtaBtn-white-txt{
+    color: variables.$primary-color;
+    font-weight: 500;
+}
+
+.CtaBtn-black-txt,
+.CtaBtn-white-txt {
+    font-family: var(--font-satoshi);
+    font-size: .70rem;
+    text-transform: uppercase;
+    padding: .65rem 1.25rem;
+    border-radius: 1.25rem;
+    border: 1px solid variables.$tertiary-color;
+    letter-spacing: 0.005rem;
+}
