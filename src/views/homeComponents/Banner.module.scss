@@ -85,6 +85,7 @@
 }
 
 .whiteContainer {
+    position: relative;
     background-color: v.$primary-color;
     color: v.$secondary-color;
     padding: 0 3rem;
@@ -143,6 +144,16 @@
     }
 }
 
+.downArrow{
+    position: absolute;
+    top: -16%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    transform: scale(0.5);
+    border: 1px solid black;
+}
+
 .projectTxtContainer {
     width: 100%;
     max-width: 450px;
@@ -169,19 +180,48 @@
     }
 }
 
-.projectParent {
-    // display: flex;
+.projectParent{
+    position: relative;
+    border-bottom: 1px solid v.$tertiary-color;
+}
+
+.projectChild,
+.projectChildMD {
+    display: grid;
+    align-items: center;
+    padding: 4rem 1rem;
+
+    @include mixins.responsive(mobile) {
+        padding: 1.5rem 1rem;
+    }
+
+    @include mixins.responsive(tablet) {
+        padding: 3rem 1rem;
+    }
 }
 
 .projectChild {
-    display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    align-items: center;
-    padding: 2rem 1rem;
+}
+
+.projectChildMD{
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 1rem;
+
+    @include mixins.responsive(mobile) {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
 }
 
 .projectName {
+    order: 1;
     color: white;
+
+    @include mixins.responsive(mobile) {
+        order: 2;
+    }
 
     h3 {
         font-family: var(--font-bigRiver);
@@ -190,10 +230,27 @@
         line-height: 1;
         text-transform: uppercase;
     }
+
+    @include mixins.responsive(mobile) {
+        h3{
+            font-size: 1.25rem;
+        }
+    }
+
+    @include mixins.responsive(tablet) {
+        h3 {
+            font-size: 2rem;
+        }
+    }
 }
 
 .projectCategory {
+    order: 2;
     color: white;
+
+    @include mixins.responsive(mobile) {
+        order: 3;
+    }
 
     p {
         font-size: .8rem;
@@ -202,4 +259,16 @@
         font-weight: 500;
         letter-spacing: 0.05rem;
     }
+}
+
+.projectImage{
+    order: 3;
+
+    @include mixins.responsive(mobile) {
+        order: 1;
+    }
+}
+
+.projectImage img{
+    border-radius: .5rem;
 }

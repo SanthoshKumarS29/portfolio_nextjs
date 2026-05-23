@@ -5,11 +5,13 @@ import AnimatedHeader from "@/views/components/AnimatedHeader";
 
 // icons
 import { FaArrowDown } from "react-icons/fa6";
+import UpperDivImage from "@/assets/images/divUpperImage.webp";
+import Image from "next/image";
 
 
 export default function About(){
     return(
-        <div className="padding-lr">
+        <section className="padding-lr">
             <div className={styles.whiteContainer}>
                 <div className={styles.aboutParent}>
                     <div className={styles.aboutChild}>
@@ -19,9 +21,11 @@ export default function About(){
                 </div>
                 <AnimatedHeader text = "Since 2024" />
                 {/* <div className={styles.downArrow}>
-                    <button type="button"><FaArrowDown /></button>
+                    <Link href="#about">
+                        <Image src={UpperDivImage} alt="UpperDivImage" width={397} height={250} />
+                    </Link>
                 </div> */}
             </div>
-        </div>
+        </section>
     )
 }

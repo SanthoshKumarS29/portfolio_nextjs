@@ -5,7 +5,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import styles from "../Banner.module.scss";
 
-import cardImage from "@/assets/images/banner/card.png"
+import cardImage from "@/assets/images/home/card.png"
 
 
 export default function Card(){
