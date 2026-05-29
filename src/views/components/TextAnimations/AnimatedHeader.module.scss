@@ -11,10 +11,11 @@
 
 .text {
     display: inline-block;
-    font-size: 12vw;
+    font-size: 13.5vw;
     font-weight: 500;
-    line-height: .75;
+    line-height: .89;
     text-transform: uppercase;
     font-family: var(--font-bigRiver);
     white-space: nowrap;
+    letter-spacing: -.35vw;
 }

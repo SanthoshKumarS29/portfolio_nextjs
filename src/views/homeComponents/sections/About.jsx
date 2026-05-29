@@ -1,7 +1,7 @@
 
 import Link from "next/link"
 import styles from "../Banner.module.scss";
-import AnimatedHeader from "@/views/components/AnimatedHeader";
+import AnimatedHeader from "@/views/components/TextAnimations/AnimatedHeader";
 
 // icons
 import { FaArrowDown } from "react-icons/fa6";

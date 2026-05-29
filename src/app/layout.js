@@ -1,6 +1,6 @@
 import localFont from "next/font/local"
 import "../assets/styles/global.scss"
-import Navbar from "@/views/components/Navbar";
+import Navbar from "@/views/components/nav/Navbar";
 
 const bigRiver = localFont({
   src: "../assets/fonts/Big_River_Sample.woff",

@@ -1,0 +1,34 @@
+@use "../../../assets/styles/mixins.scss" as mixins;
+@use "../../../assets/styles/variables.scss" as v;
+
+
+
+.questionPaddingBottom{
+    padding-bottom: 4rem;
+}
+
+.questionPaddingLR{
+    padding: 0 2rem;
+    border: 1px solid v.$gray-color;
+    border-radius: 1rem;
+}
+
+.questionBtnContainer{
+    padding: 3rem 0;
+    margin: .5rem 0;
+    border-bottom: 1px solid v.$gray-color;
+}
+
+.questionBtn{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-satoshi);
+    cursor: pointer;
+}
+
+.questionTxt{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.4rem;
+}
