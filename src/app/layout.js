@@ -1,6 +1,7 @@
 import localFont from "next/font/local"
 import "../assets/styles/global.scss"
 import Navbar from "@/views/components/nav/Navbar";
+import Footer from "@/views/components/footer/Footer";
 
 const bigRiver = localFont({
   src: "../assets/fonts/Big_River_Sample.woff",
@@ -30,6 +31,9 @@ export default function RootLayout({ children }) {
         <main className="padding-top">
           {children}
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </body>
     </html>
   );
