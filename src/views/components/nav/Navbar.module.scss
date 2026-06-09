@@ -28,6 +28,11 @@
         text-transform: uppercase;
         line-height: 1.5rem;
         letter-spacing: 0.005rem;
+
+        a{
+            color: v.$primary-color;
+            text-decoration: none;
+        }
     }
 }
 

@@ -16,7 +16,9 @@ export default function Navbar() {
             <div className={styles.navPopupParent}>
                 <div className={styles.navContainer}>
                     <div className={styles.navTxt}>
-                        <h1>PortFolio</h1>
+                        <h1>
+                            <Link href="/">Portfolio</Link>
+                        </h1>
                     </div>
                     <div className={styles.navCtaContainer}>
                         <div>
