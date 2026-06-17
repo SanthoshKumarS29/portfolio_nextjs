@@ -1,0 +1,213 @@
+@use "../../assets/styles/variables.scss" as v;
+@use "../../assets/styles/mixins.scss" as mixins;
+
+.workContainer{
+    position: relative;
+}
+
+.workBanner{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    height: calc(95dvh - 86px);
+
+    @include mixins.responsive(mobile) {
+        height: calc(60dvh - 86px);
+    }
+
+    @include mixins.responsive(tablet) {
+        height: calc(75dvh - 86px);
+    }
+
+    @include mixins.responsive(laptop) {
+        height: calc(75dvh - 86px);
+    }
+}
+
+.workHeadTxtLoopContainer{
+    overflow: hidden;
+    width: 100%;
+}
+
+.workHeadTxtLoop{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5rem;
+    width: max-content;
+    padding-top: 2rem;
+    animation: 15s linear 0s infinite normal none running scroll;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(calc(-50% - 2.5rem));
+    }
+}
+
+
+.workHeadTxt{
+    display: inline-block;
+    font-size: 16vw;
+    font-weight: 500;
+    line-height: .75;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-family: var(--font-bigRiver);
+}
+
+.workDescription{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 1rem;
+
+    p{
+        width: 100%;
+        max-width: 350px;
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: var(--font-satoshi);
+        line-height: 1.5;
+    }
+
+    @include mixins.responsive(mobile) {
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+
+.myWorks{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 610px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0;
+
+    @include mixins.responsive(mobile) {
+        position: static;
+        max-width: none;
+        margin: 2rem 0;
+    }
+
+    @include mixins.responsive(tablet) {
+        position: static;
+        max-width: none;
+        margin: 2rem 0;
+    }
+
+    @include mixins.responsive(laptop) {
+        max-width: 500px;
+    }
+}
+
+.myworksContainer{
+    background-color: v.$primary-color;
+    // padding: 2rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 610px;
+
+    @include mixins.responsive(mobile) {
+        max-width: none;
+    }
+
+    @include mixins.responsive(laptop) {
+        max-width: 500px;
+    }
+}
+
+.myworksHeader{
+    position: sticky;
+    top: 0;
+    background-color: v.$primary-color;
+    border-radius: 1rem 1rem 0 0;
+    padding: 1.5rem;
+
+    p {
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--font-satoshi);
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: v.$secondary-color;
+    }
+}
+
+.myworksBody{
+    height: 100%;
+    max-height: 500px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    @include mixins.responsive(laptop) {
+        max-height: 400px;
+    }
+}
+
+.myworksBodyHeader{
+    padding: 4rem 1rem 1.5rem 1rem;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    margin: 0 auto;
+    p{
+        font-size: 1.4rem;
+        font-weight: 400;
+        font-family: var(--font-satoshi);
+        line-height: 1.5;
+        color: v.$secondary-color;
+    }
+
+    @include mixins.responsive(mobile) {
+        p{
+            font-size: 1rem;
+        }
+    }
+}
+
+.myworksBodyContent,
+.myworksCard{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.myworksCard {
+    img{
+        border-radius: 0.5rem;
+    }
+}
+
+.myworksBodyContent{
+    padding: 0 1rem 1.5rem 1rem;
+}
+
+.myworksCardContent{
+
+    h3{
+        font-size: 1.2rem;
+        font-weight: 500;
+        font-family: var(--font-bigRiver);
+        line-height: 1.5;
+        color: v.$secondary-color;
+    }
+
+    p{
+        font-size: 1rem;
+        font-weight: 400;
+        font-family: var(--font-satoshi);
+        line-height: 1.5;
+        color: v.$tertiary-color;
+    }
+}

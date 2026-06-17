@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function About(){
     return(
-        <section className="padding-lr">
+        <section className="padding-lr max-width">
             <div className={styles.whiteContainer}>
                 <div className={styles.aboutParent}>
                     <div className={styles.aboutChild}>

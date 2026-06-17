@@ -23,7 +23,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${satoshi.variable} ${bigRiver.variable}`}>
+    <html lang="en" className={`${satoshi.variable} ${bigRiver.variable}`} data-scroll-behavior="smooth">
       <body>
         <header>
           <Navbar />

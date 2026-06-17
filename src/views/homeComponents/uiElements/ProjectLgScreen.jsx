@@ -102,7 +102,7 @@ function ProjectRow({ project }) {
 
 export default function ProjectLgScreen(){
     return(
-        <section className="padding-lr padding-tb">
+        <section className="padding-lr padding-tb max-width">
             <div className={styles.projectTxtContainer}>
                 <p>
                     I have worked with businesses of all sizes to create stunning websites

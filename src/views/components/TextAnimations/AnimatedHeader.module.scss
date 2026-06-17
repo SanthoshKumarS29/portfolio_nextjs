@@ -1,5 +1,12 @@
+@use "../../../assets/styles/mixins.scss" as mixins;
+
 .headTxtParent{
-    padding-bottom: 3rem;
+    padding: 1rem 0 3rem;
+
+    @include mixins.responsive(mobile){
+        padding: 1rem 0 1rem;
+    }
+
 }
 
 .headTxtContainer {
@@ -18,4 +25,8 @@
     font-family: var(--font-bigRiver);
     white-space: nowrap;
     letter-spacing: -.35vw;
+
+    @include mixins.responsive(largeScreen){
+        font-size: 10.5vw;
+    }
 }

@@ -9,7 +9,11 @@ import MenuLinks from "./MenuLinks"
 
 export default function Navbar() {
 
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+
+    const handleMenuClick = () => {
+        setOpen(!open);
+    }
 
     return (
         <nav className={styles.navbar}>
@@ -24,7 +28,7 @@ export default function Navbar() {
                         <div>
                             <Link href="/" className="CtaBtn-white-txt">Contact Me</Link>
                         </div>
-                        <div className={styles.navmenuContainer} onClick={() => setOpen(!open)}>
+                        <div className={styles.navmenuContainer} onClick={handleMenuClick}>
                             <button className={`${styles.menuBtn} ${open ? styles.menuActive : ""}`} type="button">
                                 <span className={styles.menuline}></span>
                                 <span className={styles.menuline}></span>
@@ -44,7 +48,7 @@ export default function Navbar() {
                                 ease: "easeInOut"
                             }}
                         >
-                            <MenuLinks />
+                            <MenuLinks handleMenuClick={handleMenuClick} />
                         </motion.div>
                     )}
                 </AnimatePresence>

@@ -14,7 +14,7 @@ export default function HomePage() {
             <About />
             <Projects />
             <section>
-                <div className="padding-lr padding-tb">
+                <div className="padding-lr padding-tb max-width">
                     <div className={styles.whiteContainer}>
                         <Services />
                         <Quote />

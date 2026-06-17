@@ -44,7 +44,7 @@ export default function Services() {
                             <h3>{contents.head}</h3>
                             <p>{contents.para}</p>
                             <div className={styles.serviceContentImg}>
-                                <Image src={card} alt='Service Card' width={450} height={250} className='fluid'/>
+                                <Image src={card} alt='Service Card' width={550} height={250} className='fluid'/>
                             </div>
                         </div>
                     </div>

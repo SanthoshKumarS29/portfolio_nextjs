@@ -397,6 +397,10 @@
     @include mixins.responsive(mobile) {
         max-width: 350px;
     }
+
+    @include mixins.responsive(largeScreen){
+        max-width: 650px;
+    }
 }
 
 .sliderContentContainer {
@@ -422,8 +426,18 @@
         }
     }
 
+    @include mixins.responsive(largeScreen) {
+        p:first-child {
+            font-size: 1.75rem;
+        }
+    }
+
     @include mixins.responsive(mobile) {
         padding: 2rem 1rem;
+    }
+
+    @include mixins.responsive(largeScreen){
+        padding: 3rem 2rem;
     }
 }
 
@@ -453,6 +467,10 @@
     @include mixins.responsive(mobile) {
         font-size: 1rem;
     }
+
+    @include mixins.responsive(largeScreen) {
+        font-size: 1.25rem;
+    }
 }
 
 .sliderBtn {
@@ -472,6 +490,10 @@
     background-color: transparent;
     border-bottom: none;
     cursor: pointer;
+
+    @include mixins.responsive(largeScreen){
+        font-size: 1.15rem;
+    }
 }
 
 .sliderBtnLeft,

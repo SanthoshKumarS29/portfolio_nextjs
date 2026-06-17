@@ -40,4 +40,10 @@
       @content;
     }
   }
+
+  @else if $device == largeScreen {
+    @media screen and (min-width: 1700px){
+      @content
+    }
+  }
 }

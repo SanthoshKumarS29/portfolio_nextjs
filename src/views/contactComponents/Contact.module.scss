@@ -1,0 +1,251 @@
+@use "../../assets/styles/variables.scss" as v;
+@use "../../assets/styles/mixins.scss" as mixins;
+
+
+.contactContainer{
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contactBg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+    height: calc(100dvh - 86px);
+
+    @include mixins.responsive(mobile) {
+        height: calc(60dvh - 86px);
+    }
+
+    @include mixins.responsive(tablet) {
+        height: calc(75dvh - 86px);
+    }
+}
+
+.contactBgTxtLoopContainer{
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.contactBgTxtLoop{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5rem;
+    width: max-content;
+    animation: 15s linear 0s infinite normal none running scroll;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(calc(-50% - 2.5rem));
+    }
+}
+
+
+.contactBgTxt{
+    display: inline-block;
+    font-size: 20vw;
+    font-weight: 500;
+    line-height: .75;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-family: var(--font-bigRiver);
+}
+
+.contactInfoContainer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    margin:  auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mixins.responsive(mobile){
+        position: static;
+    }
+
+    @include mixins.responsive(tablet){
+        position: static;
+    }
+}
+
+.contactInfo{
+    height: auto;
+    background-color: v.$primary-color;
+    border-radius: .75rem;
+}
+
+.contactInfoHeader{
+    text-align: center;
+    color: v.$secondary-color;
+    padding: 3rem 3rem 1rem;
+
+    @include mixins.responsive(mobile){
+        padding: 2rem 2rem 1rem;
+    }
+}
+
+.contactInfoIcon{
+    display: inline-block;
+    background-color: v.$gray-color;
+    padding: .75rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.contactInfoHeadTxt{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+    font-family: var(--font-satoshi);
+
+    @include mixins.responsive(mobile){
+        font-size: 1.25rem;
+    }
+}
+
+.contactInfoHeadDesc{
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    font-family: var(--font-satoshi);
+
+    @include mixins.responsive(mobile){
+        font-size: 1rem;
+    }
+}
+
+.contactInfoBody{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 3rem 2rem;
+
+    @include mixins.responsive(mobile) {
+        padding: 0 1.5rem;
+    }
+}
+
+.contactInfoItem{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contactInfoItemIcon{
+    display: inline-flex;
+    align-items: center;
+    background-color: v.$secondary-color;
+    padding: .75rem;
+    border-radius: 50%;
+}
+
+.contactInfoItemContent{
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+
+    p{
+        font-size: 1rem;
+        font-weight: 500;
+        color: v.$light-txt-color;
+        font-family: var(--font-satoshi);
+        text-transform: uppercase;
+    }
+
+    a{
+        font-size: 1rem;
+        font-weight: 500;
+        color: v.$secondary-color;
+        font-family: var(--font-satoshi);
+        text-decoration: none;
+    }
+}
+
+.contactInfoFooter{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 3rem 2rem;
+
+    @include mixins.responsive(mobile) {
+        padding: 2rem 1.5rem 2rem;
+    }
+}
+
+.contactInfoFooterTxt{
+    font-size: 1rem;
+    font-weight: 500;
+    color: v.$light-txt-color;
+    font-family: var(--font-satoshi);
+    text-align: center;
+}
+
+.contactInfoFooterLink{
+    position: relative;
+}
+
+.contactInfoFooterLinkBtn{
+    display: inline-block;
+    flex: 1;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: v.$primary-color;
+    font-family: var(--font-satoshi);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border: 1px solid v.$secondary-color;
+    background-color: v.$secondary-color;
+    border-radius: 2rem;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    
+    &:hover{
+        border: 1px solid v.$secondary-color;
+        background-color: transparent;
+        color: v.$secondary-color;
+    }
+}
+
+.contactInfoFooterLinkIcon{
+    position: absolute;
+    top: 28%;
+    right: 1rem;
+    color: v.$primary-color; 
+    opacity: 1;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+}
+
+.contactInfoFooterLinkBtn:hover + .contactInfoFooterLinkIcon{
+    opacity: 1;
+    color: v.$secondary-color;
+}
+
+
+.whiteContainer {
+    position: relative;
+    background-color: v.$primary-color;
+    color: v.$secondary-color;
+    padding: 0 3rem;
+    border-radius: .5rem;
+
+    @include mixins.responsive(mobile) {
+        padding: 0 1rem;
+    }
+
+}
