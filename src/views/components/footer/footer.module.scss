@@ -35,9 +35,16 @@
     gap: 1rem;
     padding: 2rem 0;
     border-top: 1px solid v.$tertiary-color;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 
     @include mixins.responsive(mobile) {
         flex-direction: column;
+    }
+
+    @include mixins.responsive(largeScreen){
+        max-width: 2000px;
     }
 }
 

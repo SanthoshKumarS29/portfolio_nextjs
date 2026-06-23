@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 1rem;
-    height: calc(100dvh - 86px);
+    height: calc(95dvh - 86px);
 
     @include mixins.responsive(mobile) {
         height: calc(60dvh - 86px);
@@ -80,6 +80,11 @@
     @include mixins.responsive(tablet){
         position: static;
     }
+
+
+    @include mixins.responsive(largeScreen){
+        max-width: 700px;
+    }
 }
 
 .contactInfo{
@@ -115,6 +120,10 @@
     @include mixins.responsive(mobile){
         font-size: 1.25rem;
     }
+
+    @include mixins.responsive(largeScreen){
+        font-size: 2.75rem;
+    }
 }
 
 .contactInfoHeadDesc{
@@ -125,6 +134,10 @@
 
     @include mixins.responsive(mobile){
         font-size: 1rem;
+    }
+
+    @include mixins.responsive(largeScreen){
+        font-size: 2rem;
     }
 }
 
@@ -151,6 +164,12 @@
     background-color: v.$secondary-color;
     padding: .75rem;
     border-radius: 50%;
+    font-size: 1rem;
+
+    @include mixins.responsive(largeScreen){
+        font-size: 2rem;
+    }
+
 }
 
 .contactInfoItemContent{
@@ -166,6 +185,12 @@
         text-transform: uppercase;
     }
 
+    @include mixins.responsive(largeScreen){
+        p{
+            font-size: 1.25rem;
+        }
+    }
+
     a{
         font-size: 1rem;
         font-weight: 500;
@@ -173,6 +198,13 @@
         font-family: var(--font-satoshi);
         text-decoration: none;
     }
+
+    @include mixins.responsive(largeScreen){
+        a{
+            font-size: 1.25rem;
+        }
+    }
+
 }
 
 .contactInfoFooter{
@@ -192,6 +224,10 @@
     color: v.$light-txt-color;
     font-family: var(--font-satoshi);
     text-align: center;
+
+    @include mixins.responsive(largeScreen){
+        font-size: 1.25rem;
+    }
 }
 
 .contactInfoFooterLink{
@@ -218,6 +254,11 @@
         border: 1px solid v.$secondary-color;
         background-color: transparent;
         color: v.$secondary-color;
+    }
+
+    @include mixins.responsive(largeScreen){
+        padding: 1.25rem 1.5rem;
+        font-size: 1.25rem;
     }
 }
 

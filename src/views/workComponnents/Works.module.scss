@@ -118,7 +118,7 @@
     max-width: 610px;
 
     @include mixins.responsive(mobile) {
-        max-width: none;
+        max-width: 100%;
     }
 
     @include mixins.responsive(laptop) {
@@ -152,6 +152,10 @@
 
     @include mixins.responsive(laptop) {
         max-height: 400px;
+    }
+
+    @include mixins.responsive(largeScreen){
+        max-height: 700px;
     }
 }
 
@@ -193,6 +197,14 @@
     padding: 0 1rem 1.5rem 1rem;
 }
 
+
+.flexHoriz{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
 .myworksCardContent{
 
     h3{
@@ -210,4 +222,8 @@
         line-height: 1.5;
         color: v.$tertiary-color;
     }
+}
+
+.myworksCardArrow span{
+    color: v.$secondary-color;
 }

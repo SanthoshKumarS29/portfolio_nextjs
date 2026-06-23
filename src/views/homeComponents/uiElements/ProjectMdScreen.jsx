@@ -1,17 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from '../Banner.module.scss';
+import { Projects } from "@/utils/ProjectData";
 
 // Imags and icons
 import card from "@/assets/images/home/cardMd.webp";
 
-const projects = [
-    { name: "Airtable", category: "Graphic Design", href: "/", image: card },
-    { name: "Delta Airlines", category: "Branding", href: "/", image: card },
-    { name: "Samsung", category: "Interaction Design", href: "/", image: card },
-    { name: "Fovera Health", category: "Interaction Design", href: "/", image: card },
-    { name: "McDonalds", category: "Strategy", href: "/", image: card },
-]
 
 export default function ProjectMdScreen(){
     return(
@@ -25,12 +19,12 @@ export default function ProjectMdScreen(){
                     View my Portfolio
                 </Link>
             </div>
-            {projects.map((project, i) => (
-                <div key={i}>
-                    <Link href={project.href} className={styles.projectChildMD}>
+            {Projects.map((project) => (
+                <div key={project.title}>
+                    <Link href={`/works/${project.slug}`} className={styles.projectChildMD}>
 
                         <div className={styles.projectName}>
-                            <h3>{project.name}</h3>
+                            <h3>{project.title}</h3>
                         </div>
 
                         <div className={styles.projectCategory}>
@@ -39,9 +33,8 @@ export default function ProjectMdScreen(){
 
                         <div
                             className={styles.projectImage}>
-                            <Image src={project.image} alt={project.name} width={756} height={225} className="fluid"/>
+                            <Image src={project.homeImage2} alt={project.title} width={756} height={225} className="fluid"/>
                         </div>
-
                     </Link>
                 </div>
             ))}

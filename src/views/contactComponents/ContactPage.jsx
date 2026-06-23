@@ -6,7 +6,7 @@ export default function ContactPage() {
     return (
         <>
             <ContactTxtBg />
-            <section className='padding-lr padding-tb'>
+            <section className='padding-lr padding-tb max-width'>
                 <div className={styles.whiteContainer}>
                     <Questions />
                 </div>

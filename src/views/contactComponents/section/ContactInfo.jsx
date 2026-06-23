@@ -17,21 +17,21 @@ export default function ContactInfo(){
             name: 'Email',
             url: 'mailto',
             urlName:'santhosh@example.com',
-            icon: <MdOutlineEmail size={23} />
+            icon: <MdOutlineEmail />
         },
         {
             id: 2,
             name: 'LinkedIn',
             url: 'https://www.linkedin.com/in/your-profile',
             urlName:'linkedin.com/in/your-profile',
-            icon: <FaLinkedinIn size={23} />
+            icon: <FaLinkedinIn />
         },
         {
             id: 3,
             name: 'GitHub',
             url: 'https://github.com/your-profile',
             urlName:'github.com/your-profile',
-            icon: <FaGithub size={23} />
+            icon: <FaGithub />
         }
     ]
 

@@ -5,17 +5,8 @@ import Image from "next/image"
 import styles from '../Banner.module.scss'
 import { useRef } from "react"
 import { motion, useAnimation, useMotionValue, useSpring, useTransform } from "framer-motion"
+import { Projects } from "@/utils/ProjectData"
 
-// Images
-import card from "@/assets/images/home/card.png"
-
-const projects = [
-    { name: "Airtable", category: "Graphic Design", href: "/", image: card },
-    { name: "Delta Airlines", category: "Branding", href: "/", image: card },
-    { name: "Samsung", category: "Interaction Design", href: "/", image: card },
-    { name: "Fovera Health", category: "Interaction Design", href: "/", image: card },
-    { name: "McDonalds", category: "Strategy", href: "/", image: card },
-]
 
 function ProjectRow({ project }) {
     const controls = useAnimation()
@@ -68,10 +59,10 @@ function ProjectRow({ project }) {
             onMouseLeave={handleMouseLeave}
             onMouseMove={handleMouseMove}
         >
-            <Link href={project.href} className={styles.projectChild}>
+            <Link href={`/works/${project.slug}`} className={styles.projectChild}>
 
                 <div className={styles.projectName}>
-                    <h3>{project.name}</h3>
+                    <h3>{project.title}</h3>
                 </div>
 
                 <div className={styles.projectCategory}>
@@ -92,7 +83,7 @@ function ProjectRow({ project }) {
                         transformPerspective: 800,
                     }}
                 >
-                    <Image src={project.image} alt={project.name} width={225} height={325} />
+                    <Image src={project.homeImage1} alt={project.title} width={225} height={325} />
                 </motion.div>
 
             </Link>
@@ -113,8 +104,8 @@ export default function ProjectLgScreen(){
                 </Link>
             </div>
 
-            {projects.map((project) => (
-                <ProjectRow key={project.name} project={project} />
+            {Projects.map((project) => (
+                <ProjectRow key={project.title} project={project} />
             ))}
         </section>
     )

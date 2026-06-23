@@ -1,9 +1,12 @@
 import styles from '../Works.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Projects } from '@/utils/ProjectData';
 
 // Images
 import card from '../../../assets/images/home/cardMd.webp';
+import { BsArrowRightSquareFill } from "react-icons/bs";
+
 
 export default function MyWorks() {
 
@@ -48,12 +51,17 @@ export default function MyWorks() {
                     <p>My aim is to help my Clients maximize their potential.</p>
                 </div>
                 <div className={styles.myworksBodyContent}>
-                    {projects.map((project, index) => (
-                        <Link href="/" key={project.id} className={styles.myworksCard}>
-                            <Image src={project.img} alt={project.title} width={600} height={600} className='fluid'/>
-                            <div className={styles.myworksCardContent}>
-                                <h3>{project.title}</h3>
-                                <p>{project.description}</p>
+                    {Projects.map((project) => (
+                        <Link href={`/works/${project.slug}`} key={project.title} className={styles.myworksCard}>
+                            <Image src={project.homeImage2} alt={project.title} width={600} height={600} className='fluid'/>
+                            <div className={styles.flexHoriz}>
+                                <div className={styles.myworksCardContent}>
+                                    <h3>{project.title}</h3>
+                                    <p>{project.category}</p>
+                                </div>
+                                <div className={styles.myworksCardArrow}>
+                                    <span><BsArrowRightSquareFill size={25}/></span>
+                                </div>
                             </div>
                         </Link>
                     ))}

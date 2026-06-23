@@ -1,0 +1,148 @@
+
+@use "../../assets/styles/variables.scss" as v;
+@use "../../assets/styles/mixins.scss" as mixins;
+
+
+.whiteContainer {
+    position: relative;
+    background-color: v.$primary-color;
+    color: v.$secondary-color;
+    padding: 0 3rem;
+    border-radius: .5rem;
+
+    @include mixins.responsive(mobile) {
+        padding: 0 1rem;
+    }
+
+}
+
+.projectDetailHeader{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+
+    h1{
+        font-family: var(--font-bigRiver);
+        font-size: 6rem;
+        font-weight: 400;
+    }
+
+    @include mixins.responsive(mobile){
+        h1{
+            font-size: 2rem;
+        }
+    }
+
+    @include mixins.responsive(tablet){
+        h1{
+            font-size: 3rem;
+        }
+    }
+
+    @include mixins.responsive(tablet){
+        h1{
+            font-size: 4rem;
+        }
+    }
+
+    p{
+        font-family: var(--font-satoshi);
+        font-size: 1.2rem;
+        line-height: 1.75;
+        width: 199%;
+        max-width: 550px;
+        margin: 0 auto;
+        color: v.$light-txt-color;
+    }
+
+    @include mixins.responsive(mobile){
+        p{
+            font-size: 1rem;
+            max-width: 100%;
+        }
+    }
+
+    @include mixins.responsive(tablet){
+        p{
+            font-size: 1.05rem;
+        }
+    }
+
+    @include mixins.responsive(tablet){
+        p{
+            font-size: 1.10rem;
+        }
+    }
+}
+
+.flexHorizontal{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: 3rem 0;
+
+    @include mixins.responsive(mobile){
+        flex-direction: column;
+        align-items: start;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    @include mixins.responsive(tablet){
+        padding: 2rem 0;
+    }
+}
+
+.text{
+    font-size: .80rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: var(--font-satoshi);
+    color: v.$tertiary-color;
+    letter-spacing: 0.075rem;
+}
+
+.linkTxt{
+    display: flex;
+    align-items: center;
+    gap: .05rem;
+
+    a{
+        font-size: .80rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        font-family: var(--font-satoshi);
+        color: v.$tertiary-color;
+        letter-spacing: 0.075rem;
+    }
+    
+    span{
+        margin-top: .35rem;
+        color: v.$tertiary-color;
+    }
+}
+
+.flexVertical{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+
+.projectImageDiv{
+    padding: 4rem 2rem;
+    background-color: v.$secondary-color;
+    border-radius: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectImage img{
+    border-radius: .5rem;
+}
