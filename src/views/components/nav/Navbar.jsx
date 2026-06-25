@@ -26,7 +26,7 @@ export default function Navbar() {
                     </div>
                     <div className={styles.navCtaContainer}>
                         <div>
-                            <Link href="/" className="CtaBtn-white-txt">Contact Me</Link>
+                            <Link href="/contact-us" className="CtaBtn-white-txt">Contact Me</Link>
                         </div>
                         <div className={styles.navmenuContainer} onClick={handleMenuClick}>
                             <button className={`${styles.menuBtn} ${open ? styles.menuActive : ""}`} type="button">

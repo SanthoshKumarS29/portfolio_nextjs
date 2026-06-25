@@ -18,7 +18,7 @@ export default function Banner(){
                     </div>
                     <div className={styles.aboutDescription}>
                         <p>With years of experience in the industry, I have worked with businesses of all sizes.</p>
-                        <Link href='/' className='CtaBtn-white-txt'>View My Projects</Link>
+                        <Link href='/works' className='CtaBtn-white-txt'>View My Projects</Link>
                     </div>
                 </div>
             </div>

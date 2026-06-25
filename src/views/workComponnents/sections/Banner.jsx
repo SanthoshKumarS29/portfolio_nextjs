@@ -20,7 +20,7 @@ export default function Banner(){
                         </div>
                         <div className={styles.workDescription}>
                             <p>With years of experience in the industry, I have worked with businesses of all sizes.</p>
-                            <Link href='/' className='CtaBtn-white-txt'>View My Projects</Link>
+                            <Link href='/contact-us' className='CtaBtn-white-txt'>Contact Me</Link>
                         </div>
                     </div>
                     <div className={styles.myWorks}>

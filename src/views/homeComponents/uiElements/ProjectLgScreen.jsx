@@ -99,7 +99,7 @@ export default function ProjectLgScreen(){
                     I have worked with businesses of all sizes to create stunning websites
                     and designs that capture their brand&apos;s identity.
                 </p>
-                <Link href="/" className="CtaBtn-white-txt">
+                <Link href="/works" className="CtaBtn-white-txt">
                     View my Portfolio
                 </Link>
             </div>

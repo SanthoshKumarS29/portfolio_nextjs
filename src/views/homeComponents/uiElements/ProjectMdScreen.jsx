@@ -15,7 +15,7 @@ export default function ProjectMdScreen(){
                     I have worked with businesses of all sizes to create stunning websites
                     and designs that capture their brand's identity.
                 </p>
-                <Link href="/" className="CtaBtn-white-txt">
+                <Link href="/works" className="CtaBtn-white-txt">
                     View my Portfolio
                 </Link>
             </div>
